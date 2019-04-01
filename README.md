@@ -48,5 +48,9 @@ Update specified fields of specified customer
 
     curl -X PATCH -H "Content-Type: application/json" -d '{"first":"SAMUEL"}' http://localhost:8080/customer/123
 
+## POST
 
+Create a new customer - id will be generated.
+
+    curl -X POST -H "Content-Type: application/json" -d'{"first":"Bruce","last":"Wayne","dob":"1940-04-04"}' http://localhost:8080/customer
 

@@ -99,4 +99,12 @@ public class CustomerController {
             return ResponseEntity.notFound().build();
         }
     }
+
+    @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Customer> postCustomers(@RequestBody Customer pCustomer){
+        pCustomer.setId(UUID.randomUUID().toString());
+        this.customers.add(pCustomer);
+        return ResponseEntity.ok(pCustomer);
+    }
+
 }

@@ -24,6 +24,25 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Customer'
+    post:
+      tags:
+      - customer-controller
+      summary: postCustomers
+      operationId: postCustomersUsingPOST
+      requestBody:
+        description: pCustomer
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Customer'
+        required: true
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Customer'
   /customer/{id}:
     get:
       tags:

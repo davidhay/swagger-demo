@@ -38,6 +38,38 @@
             }
           }
         }
+      },
+      "post": {
+        "tags": [
+          "customer-controller"
+        ],
+        "summary": "postCustomers",
+        "operationId": "postCustomersUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "pCustomer",
+            "description": "pCustomer",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Customer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Customer"
+            }
+          }
+        }
       }
     },
     "/customer/{id}": {
