@@ -27,6 +27,29 @@
         "produces": [
           "application/json"
         ],
+        "parameters": [
+          {
+            "name": "first",
+            "in": "query",
+            "description": "first",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "last",
+            "in": "query",
+            "description": "last",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "description": "type",
+            "required": false,
+            "type": "string"
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -226,6 +249,13 @@
         },
         "last": {
           "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "PRIORITY",
+            "NORMAL"
+          ]
         }
       }
     }

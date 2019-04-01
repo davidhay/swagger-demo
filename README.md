@@ -32,11 +32,11 @@ Get specified customers.
 
 Create new Customer with Specified Ids.
 
-    curl -X PUT -H "Content-Type: application/json" -d '{"first":"BOB","last":"ROBERTS","dob":"1960-02-01"}' http://localhost:8080/customer/bob
+    curl -X PUT -H "Content-Type: application/json" -d '{"first":"BOB","last":"ROBERTS","dob":"1960-02-01","type":"PRIORITY"}' http://localhost:8080/customer/bob
 
 Update existing Customer with Specified Id.
 
-    curl -X PUT -H "Content-Type: application/json" -d '{"first":"SAM","last":"FIREMAN","dob":"1960-02-01"}' http://localhost:8080/customer/sam
+    curl -X PUT -H "Content-Type: application/json" -d '{"first":"SAM","last":"FIREMAN","dob":"1960-02-01","type":"NORMAL"}' http://localhost:8080/customer/sam
 
 ## DELETE
 
@@ -52,5 +52,5 @@ Update specified fields of specified customer
 
 Create a new customer - id will be generated.
 
-    curl -X POST -H "Content-Type: application/json" -d'{"first":"Bruce","last":"Wayne","dob":"1940-04-04"}' http://localhost:8080/customer
+    curl -X POST -H "Content-Type: application/json" -d'{"first":"Bruce","last":"Wayne","dob":"1940-04-04","type","PRIORITY"}' http://localhost:8080/customer
 

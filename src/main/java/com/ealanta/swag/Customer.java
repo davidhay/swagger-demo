@@ -11,5 +11,6 @@ public class Customer {
     private String first;
     private String last;
     private LocalDate dob;
+    private CustomerType type;
 
 }

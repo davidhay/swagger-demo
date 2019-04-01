@@ -15,6 +15,22 @@ paths:
       - customer-controller
       summary: getCustomers
       operationId: getCustomersUsingGET
+      parameters:
+      - name: first
+        in: query
+        description: first
+        schema:
+          type: string
+      - name: last
+        in: query
+        description: last
+        schema:
+          type: string
+      - name: type
+        in: query
+        description: type
+        schema:
+          type: string
       responses:
         200:
           description: OK
@@ -145,3 +161,8 @@ components:
           type: string
         last:
           type: string
+        type:
+          type: string
+          enum:
+          - PRIORITY
+          - NORMAL
