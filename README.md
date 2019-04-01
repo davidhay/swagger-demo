@@ -18,28 +18,33 @@ CURL COMMANDS
 GET
 
 Get all customers.
-curl http://localhost:8080/customer/
+
+    curl http://localhost:8080/customer/
 
 Get specified customers.
-curl http://localhost:8080/customer/123
-curl http://localhost:8080/customer/2112
+
+    curl http://localhost:8080/customer/123
+    curl http://localhost:8080/customer/2112
 
 PUT 
 
 Create new Customer with Specified Ids.
-curl -X PUT -H "Content-Type: application/json" -d '{"first":"BOB","last":"ROBERTS","dob":"1960-02-01"}' http://localhost:8080/customer/bob
+
+    curl -X PUT -H "Content-Type: application/json" -d '{"first":"BOB","last":"ROBERTS","dob":"1960-02-01"}' http://localhost:8080/customer/bob
 
 Update existing Customer with Specified Id.
-curl -X PUT -H "Content-Type: application/json" -d '{"first":"SAM","last":"FIREMAN","dob":"1960-02-01"}' http://localhost:8080/customer/sam
+
+    curl -X PUT -H "Content-Type: application/json" -d '{"first":"SAM","last":"FIREMAN","dob":"1960-02-01"}' http://localhost:8080/customer/sam
 
 DELETE
 
-curl -X DELETE http://localhost:8080/customer/123
+    curl -X DELETE http://localhost:8080/customer/123
 
 PATCH
 
 Update specified fields of specified customer
-curl -X PATCH -H "Content-Type: application/json" -d '{"first":"SAMUEL"}' http://localhost:8080/customer/123
+
+    curl -X PATCH -H "Content-Type: application/json" -d '{"first":"SAMUEL"}' http://localhost:8080/customer/123
 
 
 
