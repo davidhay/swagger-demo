@@ -1,3 +1,5 @@
+# Swagger
+
 Swagger JSON (generated)    
 
     http://localhost:8080/v2/api-docs
@@ -13,9 +15,9 @@ Swagger UI
 
 [openapi YAML](openapi.yaml)
 
-CURL COMMANDS
+# curl commands
 
-GET
+## GET
 
 Get all customers.
 
@@ -26,7 +28,7 @@ Get specified customers.
     curl http://localhost:8080/customer/123
     curl http://localhost:8080/customer/2112
 
-PUT 
+## PUT 
 
 Create new Customer with Specified Ids.
 
@@ -36,11 +38,11 @@ Update existing Customer with Specified Id.
 
     curl -X PUT -H "Content-Type: application/json" -d '{"first":"SAM","last":"FIREMAN","dob":"1960-02-01"}' http://localhost:8080/customer/sam
 
-DELETE
+## DELETE
 
     curl -X DELETE http://localhost:8080/customer/123
 
-PATCH
+## PATCH
 
 Update specified fields of specified customer
 
